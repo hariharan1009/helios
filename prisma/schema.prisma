@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String   @id @default(uuid())
+  firstName      String
+  lastName       String
+  username       String   @unique
+  email          String   @unique
+  hashedPassword String
+  role           Role     @default(USER)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model SolarData {
+  id                  String   @id @default(uuid())
+  latitude            Float
+  longitude           Float
+  roofArea            Float
+  slope               Float
+  panelEfficiency     Float
+  systemLosses        Float
+  estimatedSystemCost Float
+  electricityCost     Float
+  irradiance          Float?
+  estimatedACEnergy   Float?
+  systemEfficiency    Float?
+  roi                 Float?
+  paybackPeriod       Float?
+  savedAt             DateTime @default(now())
+}
