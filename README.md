@@ -1,5 +1,5 @@
 # Helios
-
+![home.page](https://github.com/hariharan1009/helios/blob/main/home%20page.png)
 ## Solar Investment Optimizer
 
 Helios is an all-in-one solar platform designed to optimize your solar investment experience. It provides comprehensive data, interactive maps, the latest news, savings calculations, and much more. Built with modern web technologies, Helios aims to empower users with the tools they need to make informed decisions about their solar energy investments.
